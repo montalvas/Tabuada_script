@@ -16,7 +16,8 @@ function clicar(){
         for (var c = 1; c <= 10; c++){
             var mult = document.createElement("option");
             mult.innerHTML = `${num} X ${c} = ${num * c}`;
-            lista.insertBefore(mult, null);
+            mult.value = `tab${c}`;
+            lista.appendChild(mult);
         }
         lista.size = "10";
         res.appendChild(lista);
